@@ -2,7 +2,8 @@
 Welcome to my collection of Python CLI mini-projects built for practical CRUD practice, portfolio strengthening, and consistent skill improvement.
 
 This collection includes:
-1️⃣ CGPA Calculator (CLI)
+
+1️⃣ CGPA Calculator (CLI) 
 2️⃣ YouTube Video Manager (JSON-based)
 3️⃣ Password Manager (SQLite-based)
 4️⃣ Contact Book (MongoDB Atlas)
