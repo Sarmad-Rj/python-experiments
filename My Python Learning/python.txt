@@ -1,0 +1,113 @@
+-----------------------------Pyhton------------------------------
+1. To check python version
+python --version
+
+2. To check all versions installed in the system
+py -0
+
+3. To check pip version 
+py -m pip --version
+
+4. To update pip verion
+python.exe -m pip install --upgrade pip
+
+5. To install numpy
+py -m pip install numpy
+
+6. To import the numpy packages
+in  IDLE: import numpy as np
+
+7. To check the version of numpy
+in IDLE: np.__version__
+
+------------------------Jupyter-Notebook-------------------------
+1. to install notebook
+cmd: pip install notebook
+
+2. To open jupyter
+open anaconda in cmd then: jupyter notebook # if it is installed in anaconda
+
+----------------------------Anaconda-----------------------------
+1. install it from the website and open it, it will open in base
+
+2. to create new env
+in base: conda create -n env-name python=3.10 -y
+
+3. to check all the envs in anaconda
+in base: conda env list
+
+4. to activate any env
+in base:  conda activate env-name
+
+5. to check conda info
+cmd: conda info
+
+6. to delete an env
+base: conda remove --name env-name --all #--all is used to delete all the packages in it
+
+7. to check what conda is containing
+base: conda list
+base: conda list -n env-name # to check in specific env
+
+
+
+
+-----------------------------Streamlit------------------------------
+1. Make sure python is installed (e.g. check version to see if it's installed)
+2. Run in cmd: pip install streamlit
+3. To check if it is installed run in cmd: streamlit hello
+
+--How to use it?--
+1. Make python file in any folder (e.g. Front.py)
+2. Open that folder in cmd and run: streamlit run file_name (e.g. streamlit run Front.py)
+   How to open a folder in cmd? (click in the address bar and type cmd and enter, cmd will open in that folder)
+3. Now just write the code in python file and refresh the file in chrome.
+
+-----------------------------WebScraping------------------------------
+1. Install Requests to get respose of any website
+cmd: pip install requests
+
+2. Install BeautifulSoup for parsing
+cmd: pip install beautifulsoup4
+
+3. Install selenium 
+cmd: pip install selenium
+
+-----------------------------MatplotLib------------------------------
+1. To install matplot library
+cmd: pip install matplotlib
+
+2. To apply theme 
+cmd: pip install mplcyberpunk (to install)
+cmd: pip show mplcyberpunk (to check if downloaded)
+cmd: pip uninstall mplcyberpunk (to uninstall)
+
+
+-----------------------------How to get users location using ip------------------------------
+1. https://api.ipify.org/ 
+this will give your ip
+
+2. https://ipinfo.io/59.103.219.140/json
+this will give you complete location, including timezone
+
+3. def get_user_location():
+    try:
+        ip = requests.get("https://api.ipify.org").text
+        res = requests.get(f"https://ipinfo.io/{ip}/json")
+        data = res.json()
+        return {
+            "ip": ip,
+            "city": data.get("city"),
+            "region": data.get("region"),
+            "country": data.get("country"),
+            "loc": data.get("loc")  # latitude,longitude
+        }
+    except Exception as e:
+        return {"error": str(e)}
+    return ip
+
+print(get_user_location)
+
+
+
+
